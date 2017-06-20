@@ -12,4 +12,6 @@ class User < ActiveRecord::Base
             presence: true, 
             uniqueness: { case_sensitive: false },
             format: { with: VALID_EMAIL_REG }
+
+  has_secure_password
 end

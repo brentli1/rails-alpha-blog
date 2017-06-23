@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :articles
+  has_many :articles, dependent: :destroy #dependent signifies that articles created by user deletes if user is removed
 
   before_save { self.email = email.downcase }
 

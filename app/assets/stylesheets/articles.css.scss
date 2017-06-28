@@ -1,0 +1,39 @@
+.article {
+  &__description {
+    margin-bottom: 20px;
+  }
+
+  &__details {
+    clear: both;
+  }
+}
+
+.article-list {
+  text-align: left;
+  
+  &__categories-container {
+    margin-top: 10px;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  &__details {
+    border-top: 1px solid #eaeaea;
+    padding: 15px 0;
+  }
+
+  &__actions-container {
+    border-top: 1px solid #eaeaea;
+    padding-top: 10px;
+  }
+
+  &__meta {
+    border-top: 1px solid #eaeaea;
+    display: block;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+}

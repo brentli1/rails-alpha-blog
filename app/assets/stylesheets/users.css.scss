@@ -1,0 +1,12 @@
+.user-list,
+.user {
+  &__items {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}

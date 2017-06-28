@@ -1,5 +1,10 @@
 <h1 class="center"><%= @category.name %></h1>
 <div class="center">
+  <% if logged_in? && current_user.admin? %>
+    <div class="row category-show__edit-badge-container">
+      <span class="badge category-badge"><%= link_to "Edit Category", edit_category_path(@category) %></span>
+    </div>
+  <% end %>
   <%= will_paginate @category_articles %>
   <%= render 'articles/article_list', articles: @category_articles %>
   <%= will_paginate @category_articles %>

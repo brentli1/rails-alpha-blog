@@ -66,6 +66,14 @@ $navbar-default-bg: #000000;
   }
 }
 
+.article-list {
+  text-align: left;
+  
+  &__categories-container {
+    margin-top: 10px;
+  }
+}
+
 .article-actions {
   border-top: 1px solid #eaeaea;
   padding-top: 10px;
@@ -99,4 +107,13 @@ $navbar-default-bg: #000000;
 .user-listing {
   list-style: none;
   padding-left: 0;
+}
+
+.category-badge {
+  background-color: #CEF6F5;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-right: 5px;
+  text-transform: uppercase;
 }

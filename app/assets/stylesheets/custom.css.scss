@@ -1,13 +1,46 @@
 $navbar-default-bg: #000000;
+$link-color: #770a04;
+$brand-primary: #770a04;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
 @import 'articles';
 @import 'users';
+@import 'categories';
+
+a {
+  transition: color 250ms;
+
+  &:hover {
+    color: lighten(#770a04, 20);
+    text-decoration: none;
+  }
+}
+
+img {
+  align-self: center;
+}
+
+.user-image {
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
 
 .navbar {
   border-radius: 0;
+
+  [data-controller-action=home] & {
+    margin-bottom: 0;
+  }
 }
 
 #nav-logo {
@@ -37,6 +70,17 @@ $navbar-default-bg: #000000;
     text-shadow: 0 0 15px #000000;
     text-transform: uppercase;
   }
+}
+
+.form-horizontal {
+  float: none;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-form__container {
+  float: none;
+  margin: 0 auto;
 }
 
 .btn-xlg {
@@ -73,13 +117,27 @@ $navbar-default-bg: #000000;
   }
 }
 
+.page-title {
+  margin-bottom: 20px;
+}
+
 .category-badge {
-  background-color: #CEF6F5;
+  background-color: #770a04;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -1px;
   margin-right: 5px;
+  padding: 5px 10px;
   text-transform: uppercase;
+  transition: background-color 250ms;
+
+  &:hover {
+    background-color: lighten(#770a04, 20);
+  }
+
+  a {
+    color: #FFFFFF;
+  }
 }
 
 .category-show__edit-badge-container {

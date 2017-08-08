@@ -1,1 +1,22 @@
-
+<% if @latest_blogs.present? %>
+  <section class="page-home">
+    <h4 class="page-home__header">Latest Blogs</h4>
+    <ul class="page-home__items">
+      <% @latest_blogs.each do |article| %>
+        <li class="page-home__item col-sm-4">
+          <div class="well">
+            <figure class="page-home__fig">
+              <%= link_to user_path(article.user.id) do %>
+                <%= gravatar_for article.user, size: 150 %>
+                <p>Created By: <%= article.user.username %> - <%= article.created_at.strftime('%B %e, %Y') %></p>
+              <% end %>
+            </figure>
+            <%= link_to article.title, article_path(article), class: 'page-home__title' %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+<% else %>
+  <p class="lead">Sign Up and Start Creating Articles Today!</p>
+<% end %>

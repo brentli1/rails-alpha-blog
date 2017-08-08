@@ -8,7 +8,6 @@
 </head>
 <body data-controller-name="<%= controller_name %>" data-controller-action="<%= action_name %>">
   <%= render 'layouts/navigation' %>
-  <%= render 'layouts/messages' %>
   <% if action_name == 'home' %>
     <div class="center jumbotron">
       <h1>Welcome to the Blog</h1>
@@ -16,6 +15,7 @@
     </div>
   <% end %>
   <div class="container">
+    <%= render 'layouts/messages' %>
     <%= yield %>
   </div>
   <%= render 'layouts/footer' %>

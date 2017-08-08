@@ -13,5 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require vendor/selectize
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+  // Selectize
+  $('select').selectize();
+});

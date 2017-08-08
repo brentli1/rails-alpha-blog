@@ -18,13 +18,11 @@
       </div>
 
       <div class="form-group">
-        <div class="row">
-          <div class="col-sm-offset-2 col-sm-8">
-            <%= f.collection_select :category_ids, Category.all, :id, :name, {}, { multiple: true, class: 'form-control' } %>
-            <%#= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
-              <%# cb.label(class: 'checkbox-inline input-checkbox') { cb.check_box(class: 'checkbox') + cb.text } %>
-            <%# end %>
-          </div>
+        <div class="col-sm-2">
+          <%= f.label :category_ids, 'Categories', class: 'control-lab' %>
+        </div>
+        <div class="col-sm-8">
+          <%= f.collection_select :category_ids, Category.all, :id, :name, { selected: @article.categories.map(&:id) }, { multiple: true, class: 'form-control' } %>
         </div>
       </div>
 
